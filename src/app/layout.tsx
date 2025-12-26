@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { AuthProvider } from "@/components/AuthProvider";
 
 export const metadata: Metadata = {
   title: "Soma Wellness Sanctuary",
@@ -15,7 +16,9 @@ export default function RootLayout({
   return (
     <html lang="en" data-state="balanced">
       <body className="bg-soma-surface text-soma-foreground font-body antialiased">
-        <div className="min-h-screen">{children}</div>
+        <AuthProvider>
+          <div className="min-h-screen">{children}</div>
+        </AuthProvider>
       </body>
     </html>
   );

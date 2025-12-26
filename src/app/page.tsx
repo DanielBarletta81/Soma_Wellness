@@ -5,6 +5,8 @@ import { SectionCard } from "@/components/SectionCard";
 import StateSwitcher from "@/components/StateSwitcher";
 import { useSomaAura } from "@/hooks/useSomaAura";
 import { SomaSession } from "@/components/SomaSession";
+import { AuthModal } from "@/components/AuthModal";
+import { AuthStatusChip } from "@/components/AuthStatusChip";
 
 const ritualPrescriptions = [
   {
@@ -145,7 +147,7 @@ export default function Home() {
           </p>
         </div>
         <div className="flex flex-col gap-3">
-          <nav className="flex items-center gap-3 text-sm text-soma-muted">
+          <nav className="flex items-center gap-3 text-sm text-soma-muted flex-wrap">
             <Link href="#launch" className="hover:text-soma-foreground">
               Launch
             </Link>
@@ -164,6 +166,8 @@ export default function Home() {
             <Link href="#bloom" className="hover:text-soma-foreground">
               Eternal Bloom
             </Link>
+            <AuthModal />
+            <AuthStatusChip />
           </nav>
           <StateSwitcher value={state} onChange={setState} />
         </div>
