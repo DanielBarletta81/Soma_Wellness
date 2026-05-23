@@ -1,6 +1,3 @@
-This is the comprehensive, master **README.md** for the Soma Wellness Sanctuary. It is structured to be both a professional technical document for your GitHub/portfolio and a clear project summary for the client.
-
----
 
 # 🌲 Soma Wellness Sanctuary
 
