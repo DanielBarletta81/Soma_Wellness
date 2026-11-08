@@ -3,9 +3,41 @@ import "./globals.css";
 import { AuthProvider } from "@/components/AuthProvider";
 
 export const metadata: Metadata = {
-  title: "Soma Wellness Sanctuary",
+  metadataBase: new URL("https://somalivingwellness.com"),
+  title: {
+    default: "Soma Wellness Sanctuary — Yoga & Ayurvedic Wellness",
+    template: "%s | Soma Wellness"
+  },
   description:
-    "Adaptive wellness mentor blending biophilic design, chromotherapy, and lineage-based education."
+    "Soma Wellness is a calm, adaptive wellness platform blending yoga, Ayurveda, and modern nervous-system science — support, not management, without pressure, gamification, or data extraction.",
+  keywords: [
+    "yoga",
+    "ayurveda",
+    "wellness",
+    "chakra",
+    "meditation",
+    "breathwork",
+    "dosha",
+    "postpartum wellness",
+    "somatic practice"
+  ],
+  authors: [{ name: "C.J. Barletta" }],
+  openGraph: {
+    title: "Soma Wellness Sanctuary",
+    description:
+      "Where ancient lineage meets modern biological science — adaptive rituals, Ayurvedic nourishment, and lineage-based education.",
+    url: "https://somalivingwellness.com",
+    siteName: "Soma Wellness",
+    images: [{ url: "/images/hero-background.jpg", width: 1600, height: 1067, alt: "Soma Wellness sanctuary" }],
+    locale: "en_US",
+    type: "website"
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Soma Wellness Sanctuary",
+    description: "Yoga, Ayurveda, and nervous-system care — calm, optional guidance."
+  },
+  robots: { index: true, follow: true }
 };
 
 export default function RootLayout({
